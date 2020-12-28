@@ -29,7 +29,13 @@ An alternative is Win32 disk imager.
 Username: ``pi``
 Password ``raspberry``
 
-## 4. Enable SSH 
+### Alternative setup: CLI 
+
+By default the raspberry PI does not have SSH enabled. You can enable SSH by placing a file nammed strictly `ssh` in the boot partion prior to first booting the raspberry PI. 
+
+SSH in with the credentials listed previously. 
+
+## 4. Enable SSH after OS boot 
 
 SSH gives you network access to the raspi. First type
 
@@ -71,4 +77,23 @@ You can test your internet connection with `` ifconfig `` and `` ping 8.8.8.8 ``
 I would reccomend using putty. In the command prompt of windows, type ``putty.exe -ssh [yourIP]``. You now have shell access to your raspi. 
 
 <p align='center'><img src='Images/putty.png'></p>
+
+## 7. Keeping system up to date
+
+Prior to installing new software, consider the following: 
+
+```
+sudo apt-get update && sudo apt-get upgrade
+```
+as well as:
+
+```
+sudo apt-get dist-update 
+```
+or 
+```
+sudo apt-get full-upgrade 
+```
+
+
 
